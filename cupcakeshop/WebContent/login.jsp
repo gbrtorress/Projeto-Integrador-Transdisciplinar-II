@@ -1,3 +1,5 @@
+<%@page import="br.com.cupcakeshop.model.Cart"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="br.com.cupcakeshop.model.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -6,6 +8,11 @@
 	if(auth != null) {
 		
 		response.sendRedirect("index.jsp");
+	}
+	
+	ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
+	if(cart_list != null) {
+		request.setAttribute("cart_list", cart_list);
 	}
 	%>
 <!DOCTYPE html>
