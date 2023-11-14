@@ -78,6 +78,13 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", nome=" + name + ", email=" + email + ", password=" + password + "]";
 	}
+
+
+
+	public boolean userRegister(User userModel) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 	
 	

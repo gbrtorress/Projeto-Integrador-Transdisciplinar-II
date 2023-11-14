@@ -43,12 +43,16 @@
 					</div>
 
 					<div class="text-center">
-						<button type="submit" class="btn bt-primary">Login</button>
+						<button type="submit" class="btn bt-dark">Login</button>
 					</div>
 
 				</form>
 			</div>
 		</div>
+	</div>
+	
+	<div class="text-center">
+	<a href="registration.jsp ">Register HERE</a>
 	</div>
 
 
