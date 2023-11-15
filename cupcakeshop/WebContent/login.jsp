@@ -43,7 +43,7 @@
 					</div>
 
 					<div class="text-center">
-						<button type="submit" class="btn bt-dark">Login</button>
+						<button type="submit" class="btn btn-primary mt-4 ">Login</button>
 					</div>
 
 				</form>
@@ -52,7 +52,7 @@
 	</div>
 	
 	<div class="text-center">
-	<a href="registration.jsp ">Register HERE</a>
+	<a href="registration.jsp " class="btn btn-warning">Register HERE</a>
 	</div>
 
 

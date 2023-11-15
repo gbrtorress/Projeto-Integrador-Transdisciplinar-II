@@ -51,9 +51,9 @@ if(auth != null) {
 							placeholder="Enter Your Password" required>
 					</div>
 
-					<div class="text-center">
-						<button type="submit" class="btn bt-dark">Register</button>
-						<a href="login.jsp">Already have an account?</a>
+					<div class=" me-10 d-flex justify-content-center ">
+						<button type="submit" class="btn btn-primary mt-4">Register</button>
+						<a class="pt-4 ps-5" href="login.jsp">Already have an account?</a>
 					</div>
 
 				</form>
