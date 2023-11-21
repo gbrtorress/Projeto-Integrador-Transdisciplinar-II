@@ -6,14 +6,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%
-	User auth = (User) request.getSession().getAttribute("auth");
+User auth = (User) request.getSession().getAttribute("auth");
 if (auth != null) {
-	request.setAttribute("auth", auth);
+    request.setAttribute("person", auth);
 }
-
 ProductDao pd = new ProductDao(DbCon.getConnetion());
 List<Product> products = pd.getAllProducts();
-
 ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
 if (cart_list != null) {
 	request.setAttribute("cart_list", cart_list);
@@ -24,7 +22,7 @@ if (cart_list != null) {
 <head>
 <title>Cupcake Index</title>
 <%@include file="includes/header.jsp"%>
-</head>
+
 <body>
 
 	<%@include file="includes/navbar.jsp"%>

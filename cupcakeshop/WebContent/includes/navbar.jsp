@@ -1,6 +1,15 @@
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<style>
+ 
+    nav {
+      background-color: #61324D;
+    }
+    
+    body {
+      background-color: #DFD9B2;
+    }
+    
+  </style>
+<nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 text-dark nav">
 	<div class="container" >
 		<a class="navbar-brand" href="index.jsp">CupcakeShop</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
