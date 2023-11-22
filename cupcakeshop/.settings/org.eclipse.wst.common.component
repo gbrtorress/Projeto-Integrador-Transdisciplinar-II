@@ -3,7 +3,8 @@
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
         <property name="java-output-path" value="/Cupcakeshop/build/classes"/>
-        <property name="context-root" value="cupcakeshop"/>
+        <property name="context-root" value="Cupcakeshop"/>
     </wb-module>
 </project-modules>

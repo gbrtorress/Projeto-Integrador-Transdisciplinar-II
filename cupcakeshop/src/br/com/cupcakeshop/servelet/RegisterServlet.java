@@ -50,25 +50,32 @@ public class RegisterServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		//make user object
-		User userModel = new User(0, name, email, password);
+		// Verificação da senha
+        if (password.length() < 4) {
+            String errorMessage = "A senha deve ter pelo menos 4 caracteres.";
+            HttpSession regSession = request.getSession();
+            regSession.setAttribute("RegError", errorMessage);
+            response.sendRedirect("registration.jsp");
+            return; // Não prosseguir com o registro
+        }
 
-		//create a database model
-		UserDao regUser = null;
-		try {
-			regUser = new UserDao(DbCon.getConnetion());
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		if (regUser.saveUser(userModel)) {
-		   response.sendRedirect("index.jsp");
-		} else {
-		    String errorMessage = "User Available";
-		    HttpSession regSession = request.getSession();
-		    regSession.setAttribute("RegError", errorMessage);
-		    response.sendRedirect("registration.jsp");
-		}
-		}
-	}
+        // Continue com o código de registro se a senha atender aos requisitos
+        User userModel = new User(0, name, email, password);
+        UserDao regUser = null;
+        try {
+            regUser = new UserDao(DbCon.getConnetion());
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
 
+        if (regUser.saveUser(userModel)) {
+            response.sendRedirect("login.jsp");
+        } else {
+        	
+            String errorMessage = "Usuário inválido ou já existe.";
+            HttpSession regSession = request.getSession();
+            regSession.setAttribute("RegError", errorMessage);
+            response.sendRedirect("registration.jsp");
+        }
+    }
+}
