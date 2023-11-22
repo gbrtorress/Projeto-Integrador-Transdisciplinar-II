@@ -49,7 +49,7 @@ public class CheckOutServlet extends HttpServlet {
 				cart_list.clear();
 				response.sendRedirect("orders.jsp");
 			}else {
-				if(auth==null) {
+				if(auth == null) {
 					response.sendRedirect("login.jsp");
 				}
 				response.sendRedirect("cart.jsp");

@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
 					request.getSession().setAttribute("auth", user);
 					response.sendRedirect("login.jsp");
 				}else {
-					// out.println("<h3 style='color:crimson; text-align: center'>ERROR. FALHA AO LOGAR <a href='login.jsp'>Tente se logar novamente</a></h3>");
+					   out.println("<h3 style='color:crimson; text-align: center'>ERROR. FALHA AO LOGAR <a href='login.jsp'>Tente logar novamente</a></h3>");
 				}
 			} catch (ClassNotFoundException | SQLException e) {
 				
